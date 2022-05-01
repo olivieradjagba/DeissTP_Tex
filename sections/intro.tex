@@ -1,9 +1,9 @@
 \section{Introduction}
 Decision trees are among the most widely used machine learning models. Their success is due to the fact that they are simple to interpret and that there are efficient algorithms for learning trees of acceptable quality.
 
-The most well-known algorithms for learning decision trees, such as CART (Breiman et al. 1984) and C4.5 (Quinlan 1993), are greedy in nature: they grow the decision tree top-down, iteratively splitting the data into subsets.
+The most well-known algorithms for learning decision trees, such as CART \cite{breiman,quinlan:1993c4}, are greedy in nature: they grow the decision tree top-down, iteratively splitting the data into subsets.
 
-While in general these algorithms learn models of good accuracy, their greedy nature, in combination with the NPhardness of the learning problem (Laurent and Rivest 1976), implies that the trees that are found are not necessarily optimal. As a result, these algorithms do not ensure that:
+While in general these algorithms learn models of good accuracy, their greedy nature, in combination with the NPhardness of the learning problem \cite{laurent:1976constructing}, implies that the trees that are found are not necessarily optimal. As a result, these algorithms do not ensure that:
 
 \begin{itemize}
 	\item the trees found are the most accurate for a given limit on
@@ -11,25 +11,15 @@ While in general these algorithms learn models of good accuracy, their greedy na
 	\item  the trees found are the most accurate for a given lower
 	bound on the number of training examples used to determine class labels in the leaves of the tree;
 	\item the trees found are accurate while satisfying additional constraints such as on the fairness of the trees: in their predictions, the trees may favor one group of individuals over another.
-	%\item it uses branch-and-bound search to cut large additional
-	%parts of the search space;
-	%\item it uses a novel caching approach, in which we store also
-	%store information for itemsets for which the search space
-	%has been cut; this allows us to avoid redundant computation later on as well;
-	%\item we consider a range of different branching heuristics to
-	%find good trees more rapidly;
-	%\item the algorithm has been made any-time, i.e. it can be
-	%stopped at any time to report the best tree it has found
-	%so far.
 \end{itemize}
 
 With the increasing interest in explainable and fair models in machine learning, recent years have witnessed a renewed interest in alternative algorithms for learning decision trees that can provide such optimality guarantees.
 
-Most attention has been given in recent years and in prominent venues to approaches based on mixed integer programming (Bertsimas and Dunn 2017; Verwer and Zhang 2019; Aghaei, Azizi, and Vayanos 2019). In these approaches, a limit is imposed on the depth of the trees that can be learned and a MIP solver is used to find the optimal tree under well-defined constraints.
+Most attention has been given in recent years and in prominent venues to approaches based on mixed integer programming \cite{bertsimas:2017optimal,verwer:2019learning,aghaei:2019learning}. In these approaches, a limit is imposed on the depth of the trees that can be learned and a MIP solver is used to find the optimal tree under well-defined constraints.
 
-However, earlier algorithms for finding optimal decision trees under constraints have been studied in the literature, of which we consider the DL8 algorithm of particular interest (Nijssen and Fromont 2007; 2010). The existence of this earlier work does not appear to have been known to the authors of the more recent MIP-based approaches, and hence, no comparison with this earlier work was carried out.
+However, earlier algorithms for finding optimal decision trees under constraints have been studied in the literature, of which we consider the DL8 algorithm of particular interest \cite{nijssen:2007mining,nijssen:2010optimal}. The existence of this earlier work does not appear to have been known to the authors of the more recent MIP-based approaches, and hence, no comparison with this earlier work was carried out.
 
-DL8 is based on a different set of ideas than the MIP-based approaches: it treats the paths of a decision tree as itemsets, and uses ideas from the itemset mining literature (Agrawal et al. 1996) to search through the space of possible paths efficiently, performing dynamic programming over the itemsets to construct an optimal decision tree. Compared to the MIP-based approaches, which most prominently rely on a constraint on depth, DL8 stresses the use of a minimum support constraint to limit the size of the search space. It was shown to support a number of different optimization criteria and constraints that do not necessarily have to be linear.
+DL8 is based on a different set of ideas than the MIP-based approaches: it treats the paths of a decision tree as itemsets, and uses ideas from the itemset mining literature \cite{agrawal:1996quest} to search through the space of possible paths efficiently, performing dynamic programming over the itemsets to construct an optimal decision tree. Compared to the MIP-based approaches, which most prominently rely on a constraint on depth, DL8 stresses the use of a minimum support constraint to limit the size of the search space. It was shown to support a number of different optimization criteria and constraints that do not necessarily have to be linear.
 
 In this paper, we present a number of contributions. We will demonstrate that DL8 can also be applied in settings in which MIP-based approaches have been used; we will show that, despite its age, it outperforms the more modern MIP-based approaches significantly, and is hence an interesting starting point for future algorithms.
 
@@ -42,10 +32,10 @@ Subsequently, we will present DL8.5, an improved version of DL8 that outperforms
 	\item the algorithm has been made any-time, i.e. it can be stopped at any time to report the best tree it has found so far.
 \end{itemize}
 
-%In our experiments we focus our attention on traditional decision tree learning problems with little other constraints, as we consider these learning problems to be the hardest. How ever, we will show that DL8.5 remains sufficiently close to DL8 that the addition of other constraints or optimization criteria is straightforward.
-%
-%In a recent MIP-based study, significant attention was given to the distinction between binary and numerical data (Verwer and Zhang 2019). We will show that DL8.5 outperforms this method on both types of data.
-%
-%Our implementation is publicly available at \url{https://github.com/aglingael/dl8.5} and can easily be used from Python.
-%
-%This paper is organized as follows. The next section presents the state of the art of optimal decision trees induction. Then we present the background on which our work relies, before presenting our approach and our results.
+In our experiments we focus our attention on traditional decision tree learning problems with little other constraints, as we consider these learning problems to be the hardest. How ever, we will show that DL8.5 remains sufficiently close to DL8 that the addition of other constraints or optimization criteria is straightforward.
+
+In a recent MIP-based study, significant attention was given to the distinction between binary and numerical data \cite{verwer:2019learning}. We will show that DL8.5 outperforms this method on both types of data.
+
+Our implementation is publicly available at \url{https://github.com/aglingael/dl8.5} and can easily be used from Python.
+
+This paper is organized as follows. The next section presents the state of the art of optimal decision trees induction. Then we present the background on which our work relies, before presenting our approach and our results.

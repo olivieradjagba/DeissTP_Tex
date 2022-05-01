@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.30)  1 MAY 2022 20:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.30)  1 MAY 2022 21:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -193,8 +193,8 @@ Package: relsize 2013/03/29 ver 4.1
 \algocf@algoframe=\box59
 \algocf@algobox=\box60
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 4
-9.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 5
+2.
  (C:\Users\Olivier\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -210,20 +210,20 @@ LaTeX Warning: Label `algo:1' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
 
 (C:\Users\Olivier\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
 mkii
@@ -254,19 +254,19 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 50.
+(Font)              <7> on input line 53.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 50.
+(Font)              <5> on input line 53.
 LaTeX Font Info:    Trying to load font information for OMS+ptm on input line 5
-0.
+3.
 
 (C:\Users\Olivier\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 50.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 53.
 LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 5
-0.
+3.
 
 (C:\Users\Olivier\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
@@ -280,161 +280,164 @@ Underfull \hbox (badness 1168) in paragraph at lines 6--7
 
 
 
-])
+]
+LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 3
+9.
+
+(C:\Users\Olivier\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+))
 (sections/sec1.tex) (sections/sec2.tex
 
-LaTeX Warning: Reference `tab:1b' on page 2 undefined on input line 7.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
-
-
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 Missing character: There is no ¬ in font cmr10!
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 Missing character: There is no ¬ in font cmr10!
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no ¬ in font cmr10!
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
-
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no ¬ in font cmr10!
-
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
-
-
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
-
-
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
-
-
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no ¬ in font cmr10!
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
+
+Missing character: There is no ¬ in font cmr10!
+Missing character: There is no ¬ in font cmr10!
+
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
+
+
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
+
+
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
+
+
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no ¬ in font cmr10!
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
-
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no ¬ in font cmr10!
-
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
-
-
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
-
-Missing character: There is no ¬ in font cmr10!
-
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
-
-
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
-
-
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
-
-
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
-
-
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
-
-
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
-
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no ¬ in font cmr10!
-Missing character: There is no ¬ in font cmr10!
-
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
-
-
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
-
-
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
-
-
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no ¬ in font cmr10!
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
+
+Missing character: There is no ¬ in font cmr10!
+
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 
-LaTeX Warning: Command \textlnot invalid in math mode on input line 47.
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
+
+
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
+
+Missing character: There is no ¬ in font cmr10!
+Missing character: There is no ¬ in font cmr10!
+Missing character: There is no ¬ in font cmr10!
+
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
+
+
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
+
+
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
+
+
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
+
+Missing character: There is no ¬ in font cmr10!
+Missing character: There is no ¬ in font cmr10!
+
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
+
+
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
+
+
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
+
+
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
+
+
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
+
+
+LaTeX Warning: Command \textlnot invalid in math mode on input line 46.
 
 Missing character: There is no ¬ in font cmr10!
 Missing character: There is no ¬ in font cmr10!
@@ -448,17 +451,12 @@ Package pdftex.def Info: ./images/graph.png  used on input line 52.
 LaTeX Warning: Reference `fig:1b' on page 2 undefined on input line 56.
 
 [2]) (sections/sec3.tex
-<images/lattice_search.pdf, id=15, 570.97913pt x 267.48305pt>
+<images/lattice_search.pdf, id=16, 570.97913pt x 267.48305pt>
 File: images/lattice_search.pdf Graphic file (type pdf)
 <use images/lattice_search.pdf>
 Package pdftex.def Info: images/lattice_search.pdf  used on input line 4.
 (pdftex.def)             Requested size: 505.89pt x 236.99388pt.
-LaTeX Font Info:    Trying to load font information for OT1+pcr on input line 4
-0.
-
-(C:\Users\Olivier\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
+ [3 <./images/graph.png>]
 Underfull \hbox (badness 1383) in paragraph at lines 50--51
 \OT1/ptm/m/n/10 one node, rep-re-sent-ing a leaf that pre-dicts the ma-jor-
  []
@@ -468,17 +466,15 @@ Underfull \hbox (badness 1024) in paragraph at lines 50--51
 \OT1/ptm/m/n/10 ity class for the ex-am-ples cov-ered by I. The func-tion
  []
 
-[3 <./images/graph.png>]) (sections/sec4.tex
+) (sections/sec4.tex [4 <./images/lattice_search.pdf>]
 LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10> not available
 (Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 60.
- [4 <./images/lattice_search.pdf>]
 <./images/pruning.pdf, id=50, 245.8631pt x 239.80898pt>
 File: ./images/pruning.pdf Graphic file (type pdf)
 <use ./images/pruning.pdf>
 Package pdftex.def Info: ./images/pruning.pdf  used on input line 74.
 (pdftex.def)             Requested size: 239.39438pt x 233.49994pt.
-
-[5 <./images/pruning.pdf>]) (sections/sec5.tex
+ [5]) (sections/sec5.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -494,286 +490,277 @@ Underfull \hbox (badness 1024) in paragraph at lines 25--25
 []|\OT1/ptm/m/n/10 no par-tial so-lu-tions are stored in the
  []
 
-
-Underfull \vbox (badness 2189) has occurred while \output is active []
-
-
-Overfull \hbox (1.15567pt too wide) in paragraph at lines 41--41
+[6 <./images/pruning.pdf>]
+Overfull \hbox (1.15567pt too wide) in paragraph at lines 42--42
  []|[]| 
  []
 
 
-Overfull \hbox (1.27579pt too wide) in paragraph at lines 41--41
+Overfull \hbox (1.27579pt too wide) in paragraph at lines 42--42
  []|[]| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 45--45
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 46--46
  []|\OT1/ptm/b/n/6 450.69| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 45--45
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 46--46
  []|\OT1/ptm/m/n/6 129.24| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 45--45
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 46--46
  []|\OT1/ptm/m/n/6 127.45| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 45--45
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 46--46
  []|\OT1/ptm/m/n/6 121.87| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 45--46
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 46--47
  []|\OT1/ptm/m/n/6 250.64| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 47--47
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 48--48
  []|\OT1/ptm/m/n/6 180.84| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 47--47
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 48--48
  []|\OT1/ptm/m/n/6 204.19| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 47--47
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 48--48
  []|\OT1/ptm/m/n/6 195.73| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 49--49
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 50--50
  []|\OT1/ptm/m/n/6 566.71| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 49--49
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 50--50
  []|\OT1/ptm/m/n/6 586.39| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 49--49
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 50--50
  []|\OT1/ptm/m/n/6 593.38| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 51--51
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 52--52
  []|\OT1/ptm/m/n/6 330.71| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 53--53
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 54--54
  []|\OT1/ptm/m/n/6 553.49| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 53--53
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 54--54
  []|\OT1/ptm/m/n/6 562.83| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 55--55
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 56--56
  []|\OT1/ptm/m/n/6 558.73| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 55--55
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 56--56
  []|\OT1/ptm/m/n/6 599.87| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 57--57
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 58--58
  []|\OT1/ptm/m/n/6 132.23| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 57--58
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 58--59
  []|\OT1/ptm/m/n/6 214.76| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 59--59
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 60--60
  []|\OT1/ptm/m/n/6 109.36| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 61--61
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 62--62
  []|\OT1/ptm/m/n/6 392.22| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 61--61
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 62--62
  []|\OT1/ptm/m/n/6 368.95| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 61--61
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 62--62
  []|\OT1/ptm/m/n/6 427.34| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 65--65
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 66--66
  []|\OT1/ptm/m/n/6 483.15| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 65--65
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 66--66
  []|\OT1/ptm/m/n/6 216.11| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 65--65
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 66--66
  []|\OT1/ptm/m/n/6 206.18| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 65--65
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 66--66
  []|\OT1/ptm/m/n/6 223.85| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 65--66
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 66--67
  []|\OT1/ptm/m/n/6 528.72| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 69--69
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 70--70
  []|\OT1/ptm/m/n/6 112.48| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 70--70
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 71--71
  []|\OT1/ptm/m/n/6 352.18| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 70--70
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 71--71
  []|\OT1/ptm/m/n/6 331.39| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 76--76
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 77--77
  []|\OT1/ptm/m/n/6 128.25| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 88--88
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 89--89
  []|\OT1/ptm/m/n/6 318.87| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 88--88
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 89--89
  []|\OT1/ptm/m/n/6 334.15| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 88--89
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 89--90
  []|\OT1/ptm/m/n/6 470.88| 
  []
 
-<./images/cactus_log.pdf, id=72, 710.655pt x 284.06125pt>
+<./images/cactus_log.pdf, id=75, 710.655pt x 284.06125pt>
 File: ./images/cactus_log.pdf Graphic file (type pdf)
 <use ./images/cactus_log.pdf>
-Package pdftex.def Info: ./images/cactus_log.pdf  used on input line 98.
+Package pdftex.def Info: ./images/cactus_log.pdf  used on input line 99.
 (pdftex.def)             Requested size: 455.2979pt x 181.9936pt.
 
-Overfull \hbox (1.27579pt too wide) in paragraph at lines 106--106
+Overfull \hbox (1.27579pt too wide) in paragraph at lines 107--107
  []|[]| 
  []
 
 
-Overfull \hbox (1.15567pt too wide) in paragraph at lines 106--106
+Overfull \hbox (1.15567pt too wide) in paragraph at lines 107--107
  []|[]| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 112--112
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 113--113
  []|\OT1/ptm/m/n/6 363.01| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 114--114
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 115--115
  []|\OT1/ptm/m/n/6 253.87| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 114--114
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 115--115
  []|\OT1/ptm/m/n/6 223.42| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 114--115
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 115--116
  []|\OT1/ptm/m/n/6 222.66| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 116--116
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 117--117
  []|\OT1/ptm/m/n/6 341.57| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 116--116
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 117--117
  []|\OT1/ptm/m/n/6 365.83| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 116--117
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 117--118
  []|\OT1/ptm/m/n/6 370.26| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 122--122
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 123--123
  []|\OT1/ptm/m/n/6 423.52| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 126--126
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 127--127
  []|\OT1/ptm/m/n/6 392.09| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 128--128
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 129--129
  []|\OT1/ptm/m/n/6 533.27| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 128--128
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 129--129
  []|\OT1/ptm/m/n/6 563.83| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 128--129
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 129--130
  []|\OT1/ptm/m/n/6 534.32| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 136--136
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 137--137
  []|\OT1/ptm/m/n/6 117.34| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 140--140
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 141--141
  []|\OT1/ptm/m/n/6 205.14| 
  []
 
 
-Overfull \hbox (1.32393pt too wide) in paragraph at lines 140--140
+Overfull \hbox (1.32393pt too wide) in paragraph at lines 141--141
  []|\OT1/ptm/m/n/6 193.87| 
  []
 
-) (sections/concl.tex
-Underfull \vbox (badness 3386) has occurred while \output is active []
-
- [6]
-[7 <./images/cactus_log.pdf>]) (main.bbl) [8
-
-] (main.aux)
+) (sections/concl.tex) (main.bbl) [7] [8 <./images/cactus_log.pdf>] (main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -782,10 +769,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4693 strings out of 478532
- 84284 string characters out of 2840280
- 536018 words of memory out of 3000000
- 22831 multiletter control sequences out of 15000+600000
+ 4707 strings out of 478532
+ 84543 string characters out of 2840280
+ 535389 words of memory out of 3000000
+ 22845 multiletter control sequences out of 15000+600000
  494666 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  69i,25n,79p,1145b,667s stack positions out of 10000i,1000n,20000p,200000b,80000s
@@ -807,7 +794,7 @@ s/type1/urw/courier/ucrro8a.pfb><C:/Users/Olivier/AppData/Local/Programs/MiKTeX
 /fonts/type1/urw/times/utmb8a.pfb><C:/Users/Olivier/AppData/Local/Programs/MiKT
 eX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Olivier/AppData/Local/Programs/Mi
 KTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (8 pages, 452851 bytes).
+Output written on main.pdf (8 pages, 461160 bytes).
 PDF statistics:
  154 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

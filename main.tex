@@ -1,0 +1,47 @@
+\documentclass[letterpaper]{article}
+\usepackage{settings/aaai20}
+\usepackage{times}
+\usepackage{helvet}
+\usepackage{courier}
+\frenchspacing
+\setlength{\pdfpagewidth}{8.5in}
+\setlength{\pdfpageheight}{11in}
+
+\usepackage{url}
+\usepackage{graphicx}
+\graphicspath{{./images}}
+\usepackage{tabularx}
+\usepackage{subfig}
+\usepackage{multirow}
+\usepackage{rotate}
+\usepackage{array}
+\renewcommand{\arraystretch}{1}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}m{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}m{#1}}
+
+%\usepackage{algorithm} 
+\usepackage{algorithmic}
+\usepackage[ruled,vlined,linesnumbered]{algorithm2e}
+%\usepackage{algpseudocode}
+
+\title{Learning Optimal Decision Trees Using Caching Branch-and-Bound Search}
+\author{Gael Aglin, Siegfried Nijssen, Pierre Schaus\\
+	\{firstname.lastname\}@uclouvain.be\\
+	ICTEAM, UCLouvain\\
+	Louvain-la-Neuve, Belgium}
+
+\begin{document}
+	\maketitle
+	\input{sections/abstract}
+	\input{sections/intro}
+	\input{sections/sec1}
+	\input{sections/sec2}
+	\input{sections/sec3}
+	\input{sections/sec4}
+	\input{sections/sec5}
+	\input{sections/concl}
+	
+	\bibliography{Bibliography-File}
+	\bibliographystyle{setting/aaai}
+\end{document}

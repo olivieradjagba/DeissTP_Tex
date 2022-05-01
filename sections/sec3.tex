@@ -8,7 +8,7 @@
 	$cache \gets HashSet < Itemset, BestTree >$\;
 	$(\tau, b) \gets \verb|DL8-Recurse|(\emptyset)$\;
 	\Return $\tau$\;
-	\textbf{Procedure} \texttt{DL8-Recurse}\;
+	\textbf{Procedure} \texttt{DL8-Recurse}$(I)$\;
 		$solution \gets cache.get(I)$\;
 		\If{solution was found}{
 			\Return($solution.tree, solution.error$)\;

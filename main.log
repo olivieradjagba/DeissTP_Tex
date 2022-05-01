@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.30)  1 MAY 2022 14:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (MiKTeX 22.3) (preloaded format=pdflatex 2022.4.30)  1 MAY 2022 16:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -470,17 +470,19 @@ File: images/lattice_search.pdf Graphic file (type pdf)
 Package pdftex.def Info: images/lattice_search.pdf  used on input line 57.
 (pdftex.def)             Requested size: 505.89pt x 236.99388pt.
 ) (sections/sec4.tex
-<./images/pruning.pdf, id=26, 245.8631pt x 239.80898pt>
+LaTeX Font Info:    Font shape `OT1/pcr/m/it' in size <10> not available
+(Font)              Font shape `OT1/pcr/m/sl' tried instead on input line 33.
+ [4]
+<./images/pruning.pdf, id=31, 245.8631pt x 239.80898pt>
 File: ./images/pruning.pdf Graphic file (type pdf)
 <use ./images/pruning.pdf>
-Package pdftex.def Info: ./images/pruning.pdf  used on input line 62.
+Package pdftex.def Info: ./images/pruning.pdf  used on input line 74.
 (pdftex.def)             Requested size: 239.39438pt x 233.49994pt.
 
 
-LaTeX Warning: Reference `fig:3' on page 4 undefined on input line 66.
+LaTeX Warning: Reference `fig:3' on page 5 undefined on input line 78.
 
-[4]) (sections/sec5.tex [5 <./images/lattice_search.pdf> <./images/pruning.pdf>
-]
+[5 <./images/lattice_search.pdf> <./images/pruning.pdf>]) (sections/sec5.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <9> on input line 9.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -496,7 +498,7 @@ Underfull \hbox (badness 1024) in paragraph at lines 25--25
 []|\OT1/ptm/m/n/10 no par-tial so-lu-tions are stored in the
  []
 
-
+[6]
 Overfull \hbox (1.15567pt too wide) in paragraph at lines 40--40
  []|[]| 
  []
@@ -676,7 +678,7 @@ Overfull \hbox (1.32393pt too wide) in paragraph at lines 87--88
  []|\OT1/ptm/m/n/6 470.88| 
  []
 
-<./images/cactus_log.pdf, id=70, 710.655pt x 284.06125pt>
+<./images/cactus_log.pdf, id=75, 710.655pt x 284.06125pt>
 File: ./images/cactus_log.pdf Graphic file (type pdf)
 <use ./images/cactus_log.pdf>
 Package pdftex.def Info: ./images/cactus_log.pdf  used on input line 97.
@@ -766,7 +768,9 @@ Overfull \hbox (1.32393pt too wide) in paragraph at lines 139--139
  []|\OT1/ptm/m/n/6 193.87| 
  []
 
-) (sections/concl.tex) (main.bbl) [6] [7 <./images/cactus_log.pdf>] (main.aux)
+) (sections/concl.tex) (main.bbl) [7
+
+] [8 <./images/cactus_log.pdf>] (main.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -775,13 +779,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 4666 strings out of 478532
- 83920 string characters out of 2840280
- 534442 words of memory out of 3000000
- 22809 multiletter control sequences out of 15000+600000
- 493210 words of font info for 65 fonts, out of 8000000 for 9000
+ 4681 strings out of 478532
+ 84078 string characters out of 2840280
+ 534441 words of memory out of 3000000
+ 22819 multiletter control sequences out of 15000+600000
+ 494666 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,23n,79p,1145b,603s stack positions out of 10000i,1000n,20000p,200000b,80000s
+ 69i,22n,79p,1145b,614s stack positions out of 10000i,1000n,20000p,200000b,80000s
 {C:/Users/Olivier/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc}<
 C:/Users/Olivier/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/c
 mex10.pfb><C:/Users/Olivier/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
@@ -793,14 +797,16 @@ cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Olivier/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/User
 s/Olivier/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pf
 b><C:/Users/Olivier/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/c
-m/cmsy7.pfb><C:/Users/Olivier/AppData/Local/Programs/MiKTeX/fonts/type1/urw/cou
-rier/ucrr8a.pfb><C:/Users/Olivier/AppData/Local/Programs/MiKTeX/fonts/type1/urw
-/times/utmb8a.pfb><C:/Users/Olivier/AppData/Local/Programs/MiKTeX/fonts/type1/u
-rw/times/utmr8a.pfb><C:/Users/Olivier/AppData/Local/Programs/MiKTeX/fonts/type1
-/urw/times/utmri8a.pfb>
-Output written on main.pdf (7 pages, 434056 bytes).
+m/cmsy7.pfb><C:/Users/Olivier/AppData/Local/Programs/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmtt10.pfb><C:/Users/Olivier/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/urw/courier/ucrr8a.pfb><C:/Users/Olivier/AppData/Local/Programs/MiKTeX/font
+s/type1/urw/courier/ucrro8a.pfb><C:/Users/Olivier/AppData/Local/Programs/MiKTeX
+/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Olivier/AppData/Local/Programs/MiKT
+eX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Olivier/AppData/Local/Programs/Mi
+KTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (8 pages, 452687 bytes).
 PDF statistics:
- 141 PDF objects out of 1000 (max. 8388607)
+ 154 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

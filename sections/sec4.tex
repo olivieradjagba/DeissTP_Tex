@@ -11,38 +11,50 @@ In DL8.5, the recursive procedure \verb|DL8.5-Recurse| has an additional paramet
 
 The upper-bound is used to prune the search space using a test in line 17; intuitively, as soon as we have traversed one branch for an attribute, and the quality of that branch is already worse than accepted by the bound, we do not consider the second branch for that attribute.
 
-$$Algo2
-\label{algo:2}$$
+\newcommand{\trmtt}[1]{\textrm{\texttt{#1}}}
 \begin{algorithm}
 	\DontPrintSemicolon
 	\caption{$DL8.5(maxdepth, minsup)$}
+	\label{algo:2}
 	\label{algo:1}
 	\textbf{struct} $BestTree\{init\_ub : float;\ tree: Tree;\ error : float\}$\;
 	$cache \gets HashSet < Itemset, BestTree >$\;
-	$(\tau, b) \gets \verb|DL8-Recurse|(\emptyset)$\;
-	\Return $\tau$\;
-	\textbf{Procedure} \texttt{DL8-Recurse}\;
+	$bestSolution \gets$ \verb|DL8-Recurse|$(\emptyset, \infty)$\;
+	\Return bestSolution.tree\;
+	\textbf{Procedure} \texttt{DL8-Recurse}$(I, init\_ub)$\;
+	\If{$leaf\_error(I) = 0$ or $|I| = maxdepth$ or time-out
+		is reached}{
+		\Return $BestTree(init\_ub, make\_leaf (I),$ $leaf\_error (I))$\;
+	}
 	$solution \gets cache.get(I)$\;
-	\If{solution was found}{
-		\Return($solution.tree, solution.error$)\;
+	\If{solution was found and (($solution.tree \ne$ \textrm{\texttt{NO\_TREE}}) or $(init\_ub \le solution.init\_ub)$) }{
+		\Return $solution$\;
 	}
-	\If{$leaf\_error(I) = 0\ or\ |I| = maxdepth$}{
-		\Return($make\_leaf(I), leaf\_error (I)$)\;
-	}
-	$(\tau, b) \gets (make\_leaf(I), leaf\_error (I))$\;
-	\For{all attributes $i$}{
+	$(\tau, b, ub) \gets (\verb|NO_TREE|, +\infty, init\_ub)$\;
+	\For{all attributes $i$ in a well-chosen order}{
 		\If{$|cover (I \cup \{i\})| \ge minsup$ and $|cover (I \cup \{\neg i\})| \ge minsup$}{
-			$(\tau_1, e_1) \gets \texttt{DL8-Recurse}(I \cup \{i\})$\;
-			\If{$e_1 \le b$}{
-				$(\tau_2, e_2) \gets \texttt{DL8-Recurse}(I \cup \{i\})$\;
-				\If{$e_1 + e_2 \le b$}{
-					$(\tau, b) \gets (make\_tree(i, \tau_1, \tau_2), e_1 + e_2)$\;
+			$sol_1 \gets \textrm{\texttt{DL8.5-Recurse}}(I \cup \{i\}, ub)$\;
+			\If{$sol_1.tree =\mathrm{\mathtt{NO\_TREE}}$}{
+				\textbf{continue}\;
+			}
+			\If{$sol_1.error \le ub$}{
+				$sol_2 \gets \mathtt{DL8.5-Recurse}(I \cup \{i\},$ ${ub-sol_1.error})$\;
+				\If{$sol_2.tree =\mathrm{\mathtt{NO\_TREE}}$}{
+					\textbf{continue}\;
 				}
+				$feature\_error \gets sol_1.error + sol_2.error$\;
+				\If{$feature\_error \le ub$}{
+					$\tau \gets make\_tree(i, sol_1.tree,$ $sol_2.tree)$\;
+					$b \gets feature\_error$\;
+					$ub \gets b - 1$\;
+				}
+				\If{$feature\_error = 0$}{\textbf{break}}
 			}
 		}
 	}
-	$cache.store(I, BestT ree(\tau, b))$\;
-	\Return($\tau, b$)\;
+	$solution \gets BestTree(init\_ub, \tau, b)$\;
+	$cache.store(I, solution)$\;
+	\Return $solution$\;
 \end{algorithm}
 
 
@@ -50,7 +62,7 @@ In line 18 we use the quality of the first branch to bound the required quality 
 
 An important modification involves the interaction of the bounds with the cache. In DL8.5, we store an itemset also if no solution could be found for the given bound (line 29 is still executed even if the earlier loop did not find a tree).
 
-In this case, the special value \verb|NO TREE| is associated with the itemset in the cache, and the upper-bound used during the last search is stored. The benefit of doing so is that at a later moment, we may reuse the fact that for a given itemset and bound, no sufficiently good decision tree can be found. In particular, in line 9, when the current bound (\emph{init\_ub}) is worse than the stored upper-bound for a \verb|NO TREE| itemset, we return the \verb|NO TREE| indicator immediately.
+In this case, the special value \verb|NO_TREE| is associated with the itemset in the cache, and the upper-bound used during the last search is stored. The benefit of doing so is that at a later moment, we may reuse the fact that for a given itemset and bound, no sufficiently good decision tree can be found. In particular, in line 9, when the current bound (\emph{init\_ub}) is worse than the stored upper-bound for a \verb|NO TREE| itemset, we return the \verb|NO TREE| indicator immediately.
 
 Other modifications in comparison with DL8 improve the anytime behavior of the algorithm. In line 6 the search can be interrupted when a time-out is reached, and line 12 offers the possibility to consider the attributes in a specific heuristic order to discover good trees more rapidly.
 

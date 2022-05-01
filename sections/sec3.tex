@@ -1,14 +1,20 @@
 \section{DL8 Algorithm}
 %\newcommand{\Proc}[1]{\textbf{Procedure #1}}
+\begin{figure*}
+	\includegraphics[width=\textwidth]{images/lattice_search}
+	\caption{: Complete itemset lattice for introduction database and DL8.5 search execution}
+	\label{fig:2}
+\end{figure*}
+
 \begin{algorithm}
 	\DontPrintSemicolon
 	\caption{$DL8(maxdepth, minsup)$}
 	\label{algo:1}
 	\textbf{struct} $BestTree\{\ tree : Tree; error : float\ \}$\;
 	$cache \gets HashSet < Itemset, BestTree >$\;
-	$(\tau, b) \gets \verb|DL8-Recurse|(\emptyset)$\;
+	$(\tau, b) \gets \mathrm{\mathtt{DL8-Recurse}}(\emptyset)$\;
 	\Return $\tau$\;
-	\textbf{Procedure} \texttt{DL8-Recurse}$(I)$\;
+	\Proca{
 		$solution \gets cache.get(I)$\;
 		\If{solution was found}{
 			\Return($solution.tree, solution.error$)\;
@@ -30,6 +36,7 @@
 		}
 		$cache.store(I, BestT ree(\tau, b))$\;
 		\Return($\tau, b$)\;
+	}
 \end{algorithm}
 
 A high-level perspective of the DL8 algorithm is given in Algorithm \ref{algo:1}. Essentially, the algorithm recursively enumerates itemsets using the \verb|DL8-Recurse(I)| function. The post-condition of this function is that it returns the optimal decision tree for the transactions covered by itemset $I$, together with the quality of that tree. This optimal tree is calculated recursively using the observation that the best decision tree for a set of transactions can be obtained by considering all possible ways of partitioning the set of transactions into two, and determining the best tree for each partition recursively.
@@ -49,13 +56,7 @@ The code illustrates a number of optimizations implemented in DL8:
 	\item[Purity pruning] In line 9 the search is stopped if the error for the current itemset is already 0;
 	\item[Quality bounds] In the loop of lines 12–18, the best solution found among the children is maintained, and used to prune the second branch for an attribute if the first branch is already worse than the best solution found so far.
 \end{description}
- 
+
 We omit a number of optimizations in this pseudo-code that can be found in the original publication, in particular, optimizations that concern the incremental maintenance of data structures. While we will use most of these optimizations in our implementation as well, we do not discuss thesein detail here for reasons of simplicity.
 
 The most important optimization in DL8 that we do not use in this study is the \emph{closed itemset mining} optimization. The reason for this choice is that this optimization is hard to combine with a constraint on the depth of a decision tree. Similarly, while DL8 can be applied to other scoring functions than error, as long as the scoring function is \emph{additive}, we prioritize accuracy and the depth constraint here as we focus on solving the same problem as in recent MIP-based studies.
-\begin{figure*}
-	\includegraphics[width=\textwidth]{images/lattice_search}
-	\caption{: Complete itemset lattice for introduction database and DL8.5 search execution}
-	\label{fig:2}
-\end{figure*}
-

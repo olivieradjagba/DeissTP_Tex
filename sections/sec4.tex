@@ -22,42 +22,42 @@ The upper-bound is used to prune the search space using a test in line 17; intui
 	$bestSolution \gets$ \verb|DL8-Recurse|$(\emptyset, \infty)$\;
 	\Return bestSolution.tree\;
 	\textbf{Procedure} \texttt{DL8-Recurse}$(I, init\_ub)$\;
-	\If{$leaf\_error(I) = 0$ or $|I| = maxdepth$ or time-out
-		is reached}{
-		\Return $BestTree(init\_ub, make\_leaf (I),$ $leaf\_error (I))$\;
-	}
-	$solution \gets cache.get(I)$\;
-	\If{solution was found and (($solution.tree \ne$ \textrm{\texttt{NO\_TREE}}) or $(init\_ub \le solution.init\_ub)$) }{
-		\Return $solution$\;
-	}
-	$(\tau, b, ub) \gets (\verb|NO_TREE|, +\infty, init\_ub)$\;
-	\For{all attributes $i$ in a well-chosen order}{
-		\If{$|cover (I \cup \{i\})| \ge minsup$ and $|cover (I \cup \{\neg i\})| \ge minsup$}{
-			$sol_1 \gets \textrm{\texttt{DL8.5-Recurse}}(I \cup \{i\}, ub)$\;
-			\If{$sol_1.tree =\mathrm{\mathtt{NO\_TREE}}$}{
-				\textbf{continue}\;
-			}
-			\If{$sol_1.error \le ub$}{
-				$sol_2 \gets \mathtt{DL8.5-Recurse}(I \cup \{i\},$ ${ub-sol_1.error})$\;
-				\If{$sol_2.tree =\mathrm{\mathtt{NO\_TREE}}$}{
+	\Procb{
+		\If{$leaf\_error(I) = 0$ or $|I| = maxdepth$ or time-out
+			is reached}{
+			\Return $BestTree(init\_ub, make\_leaf (I),$ $leaf\_error (I))$\;
+		}
+		$solution \gets cache.get(I)$\;
+		\If{solution was found and (($solution.tree \ne$ \textrm{\texttt{NO\_TREE}}) or $(init\_ub \le solution.init\_ub)$) }{
+			\Return $solution$\;
+		}
+		$(\tau, b, ub) \gets (\mathrm{\mathtt{NO\_TREE}}, +\infty, init\_ub)$\;
+		\For{all attributes $i$ in a well-chosen order}{
+			\If{$|cover (I \cup \{i\})| \ge minsup$ and $|cover (I \cup \{\neg i\})| \ge minsup$}{
+				$sol_1 \gets \textrm{\texttt{DL8.5-Recurse}}(I \cup \{i\}, ub)$\;
+				\If{$sol_1.tree =\mathrm{\mathtt{NO\_TREE}}$}{
 					\textbf{continue}\;
 				}
-				$feature\_error \gets sol_1.error + sol_2.error$\;
-				\If{$feature\_error \le ub$}{
-					$\tau \gets make\_tree(i, sol_1.tree,$ $sol_2.tree)$\;
-					$b \gets feature\_error$\;
-					$ub \gets b - 1$\;
+				\If{$sol_1.error \le ub$}{
+					$sol_2 \gets \mathtt{DL8.5-Recurse}(I \cup \{i\},$ ${ub-sol_1.error})$\;
+					\If{$sol_2.tree =\mathrm{\mathtt{NO\_TREE}}$}{
+						\textbf{continue}\;
+					}
+					$feature\_error \gets sol_1.error + sol_2.error$\;
+					\If{$feature\_error \le ub$}{
+						$\tau \gets make\_tree(i, sol_1.tree,$ $sol_2.tree)$\;
+						$b \gets feature\_error$\;
+						$ub \gets b - 1$\;
+					}
+					\If{$feature\_error = 0$}{\textbf{break}}
 				}
-				\If{$feature\_error = 0$}{\textbf{break}}
 			}
 		}
+		$solution \gets BestTree(init\_ub, \tau, b)$\;
+		$cache.store(I, solution)$\;
+		\Return $solution$\;
 	}
-	$solution \gets BestTree(init\_ub, \tau, b)$\;
-	$cache.store(I, solution)$\;
-	\Return $solution$\;
 \end{algorithm}
-
-
 In line 18 we use the quality of the first branch to bound the required quality of the second branch further.
 
 An important modification involves the interaction of the bounds with the cache. In DL8.5, we store an itemset also if no solution could be found for the given bound (line 29 is still executed even if the earlier loop did not find a tree).
@@ -73,6 +73,7 @@ Our modifications of DL8 improve drastically the pruning of the search space. Fi
 \begin{figure}
 	\includegraphics[width=\linewidth]{pruning}
 	\caption{ Example of pruning}
+	\label{fig:3}
 \end{figure}
 
 Figure \ref{fig:3} shows a part of the execution of DL8.5 in more detail. The initial value of the upper-bound at node $\phi$ is $+\infty$ (line 11). The attribute A provides an error of 2; the upper-bound value is subsequently updated from $+\infty$ to 1 in line 25. In the first branch for attribute C, the new value of the upper-bound is passed down recursively (line 14). Notice that the initial value of the upper-bound at node $\neg c$ is 1. At this node, the attribute A is first visited and provides an error of 1 by summing errors of $\neg a\neg c$ and $a\neg c$ (line 21). The upper-bound for subsequent attributes is then updated to 0 and passed down recursively to the first branch of attribute B. After visiting the first item $\neg b\neg c$ the obtained error is 1 and greater than the upper-bound of 0. The second item is pruned as the condition of line 18 is not satisfied. So, there is no solution by selecting the attribute B, which leads to storing the value \verb|NO TREE| for this itemset. This error value is represented in Figures 2 and 3 by the character x.

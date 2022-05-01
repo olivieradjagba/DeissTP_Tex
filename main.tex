@@ -23,7 +23,22 @@
 %\usepackage{algorithm} 
 \usepackage{algorithmic}
 \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
-%\usepackage{algpseudocode}
+\makeatletter
+\algocf@newcmdside@kobe{Procb}{%
+	\KwSty{Procedure \normalfont\texttt{DL8.5-Recurse}$(I, init\_ub)$}%
+	\ifArgumentEmpty{#1}\relax{ #1}
+	\algocf@block{#2}{end}{#3}%
+	\par
+}
+
+\algocf@newcmdside@kobe{Proca}{%
+	\KwSty{Procedure \normalfont\texttt{DL8.5-Recurse}$(I)$}%
+	\ifArgumentEmpty{#1}\relax{ #1}
+	\algocf@block{#2}{end}{#3}%
+	\par
+}
+\makeatother
+
 
 \title{Learning Optimal Decision Trees Using Caching Branch-and-Bound Search}
 \author{Gael Aglin, Siegfried Nijssen, Pierre Schaus\\
@@ -43,5 +58,5 @@
 	\input{sections/concl}
 	
 	\bibliography{Bibliography-File}
-	\bibliographystyle{setting/aaai}
+	\bibliographystyle{settings/aaai}
 \end{document}

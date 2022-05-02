@@ -2,17 +2,17 @@
 In our experiments we answer the following questions:
 \begin{description}
 	\item[Q1] How does the performance of DL8.5 compare to DL8, MIP-based and CP-based approaches on binary data?
-	\item[Q2] What is the impac\emph{TO}f different branching heuristics on the performance of DL8.5?
-	\item[Q3] What is the impac\emph{TO}f caching incomplete results in DL8.5 (NO TREE itemsets)?
+	\item[Q2] What is the impact of different branching heuristics on the performance of DL8.5?
+	\item[Q3] What is the impact of caching incomplete results in DL8.5 (NO TREE itemsets)?
 	\item[Q4] How does the performance of DL8.5 compare to DL8, MIP-based and CP-based approaches on continuous data?
 \end{description}
 As a representative MIP-based approach, we use BinOCT, as it was shown to be the best performing MIP-based approach in a recent study (Verwer and Zhang 2019). The implementations of BinOCT\footnote{https://github.com/SiccoVerwer/binoct}, DL8 and the CP-based approach\footnote{https://bitbucket.org/helene\_verhaeghe/classificationtree/src/ default/classificationtree/} used in our comparison were obtained from their original authors, and use the CPLEX 12.9\footnote{https://www.ibm.com/analytics/cplex-optimizer} and OscaR\footnote{https://oscarlib.bitbucket.io} solvers. Experiments were performed on a server with an Intel Xeon E5-2640 CPU, 128GB of memory, running Red Hat 4.8.5-16.
 
-To respect the constrain\emph{TO}f the CP-based algorithm all the datasets used in our experiments have binary classes. We compare our algorithms on 24 binary datasets from CP4IM\footnote{https://dtai.cs.kuleuven.be/CP4IM/datasets/}, described in the first columns of Table \ref{tab:2}.
+To respect the constraint of the CP-based algorithm all the datasets used in our experiments have binary classes. We compare our algorithms on 24 binary datasets from CP4IM\footnote{https://dtai.cs.kuleuven.be/CP4IM/datasets/}, described in the first columns of Table \ref{tab:2}.
 
-Similar to Verwer and Zhang (2019), we run the different algorithms for 10 minutes on each dataset and for a maximum depth of 2, 3 and 4. All the tests are run with a minimum suppor\emph{TO}f 1 since this is the setting used in BinOCT.
+Similar to Verwer and Zhang (2019), we run the different algorithms for 10 minutes on each dataset and for a maximum depth of 2, 3 and 4. All the tests are run with a minimum support of 1 since this is the setting used in BinOCT.
 
-We do not spli\emph{TO}ur datasets in training and test sets since the focus of this work is on comparing the computational performance of algorithms that should generate decision trees of the same quality. The benefits of optimal decision trees were discussed in (Bertsimas and Dunn 2017).
+We do not split our datasets in training and test sets since the focus of this work is on comparing the computational performance of algorithms that should generate decision trees of the same quality. The benefits of optimal decision trees were discussed in (Bertsimas and Dunn 2017).
 
 We compare a number of variants of DL8.5. The following table summarizes the abbreviations used.
 
@@ -24,13 +24,13 @@ We compare a number of variants of DL8.5. The following table summarizes the abb
 	n.p.s.			& no partial solutions are stored in the cache
 \end{tabularx}
 
-Table \ref{tab:2} shows the results for a maximum depth equal to 4, as we consider deeper decision trees of more interest. If optimality could not be proven within 10 minutes, this is indicated using \emph{TO}; in this case, the objective value of the best tree found so far is shown. Note that we here exploit the ability of DL8.5 to produce a result after a time-out. The best solutions and best times are marked in bold while a star (*) is added to mark solutions proven to be optimal.
+Table \ref{tab:2} shows the results for a maximum depth equal to 4, as we consider deeper decision trees of more interest. If optimality could not be proven within 10 minutes, this is indicated using to; in this case, the objective value of the best tree found so far is shown. Note that we here exploit the ability of DL8.5 to produce a result after a time-out. The best solutions and best times are marked in bold while a star (*) is added to mark solutions proven to be optimal.
 
-BinOCT solved and proved optimality for only 1 instance within the timeout; the older DL8 algorithm solved 7 instances and the CP-based algorithm solved 11 instances. DL8.5 solved 19 (which answers \textbf{Q1}). The difference in performance is further illustrated in Figure \ref{fig:4}, which gives \emph{cactus plots} for each algorithm, for different depth constraints. In these plots each point $(x, y)$ indicates the number of instances $(x)$ solved within a time limit $(y)$. While for lower depth thresholds, BinOCT does find solutions, the performance of all variants of DL8.5 clearly remains superior to tha\emph{TO}f DL8, BinOCT and the CP-based algorithm, obtaining orders of magnitude better performance.
+BinOCT solved and proved optimality for only 1 instance within the timeout; the older DL8 algorithm solved 7 instances and the CP-based algorithm solved 11 instances. DL8.5 solved 19 (which answers \textbf{Q1}). The difference in performance is further illustrated in Figure \ref{fig:4}, which gives \emph{cactus plots} for each algorithm, for different depth constraints. In these plots each point $(x, y)$ indicates the number of instances $(x)$ solved within a time limit $(y)$. While for lower depth thresholds, BinOCT does find solutions, the performance of all variants of DL8.5 clearly remains superior to that of DL8, BinOCT and the CP-based algorithm, obtaining orders of magnitude better performance.
 
 Comparing the different branching heuristics in DL8.5, the differences are relatively small; however, for deeper trees, a descending order of information gain gives slightly better results. This confirms the intuition that chosen a split with high information gain is a good heuristic (\textbf{Q2}).
 
-If we disable DL8.5’s ability to cache incomplete results, we see a significant degradation in performance. In this varian\emph{TO}nly 12 instances are solved optimally, instead of 19, for a depth of 4. Hence, this optimization is significant (\textbf{Q3}).
+If we disable DL8.5’s ability to cache incomplete results, we see a significant degradation in performance. In this variant only 12 instances are solved optimally, instead of 19, for a depth of 4. Hence, this optimization is significant (\textbf{Q3}).
 
 To answer \textbf{Q4}, we repeat these tests on continuous data. For this, we use the same datasets as Verwer and Zhang (2019). These datasets were obtained from the UCI repository\footnote{https://archive.ics.uci.edu/ml/index.php} and are summarized in the first columns of Table \ref{tab:3}. Before running DL8, the CP-based algorithm and DL8.5, we binarize these datasets by creating binary features using the same approach as the one used by \cite{verwer:2019learning}. %Verwer and Zhang (2019).
 Note that the number of generated features is very high in this case. As a result, for most datasets all algorithms reach a time-out for maximum depths of 3 and 4, as was also shown by Verwer and Zhang (2019). Hence, we focus on results for a depth of 2 in Table \ref{tab:3}. Even though BinOCT uses a specialized technique for solving continuous data, the table shows that DL8.5 outperforms DL8, the CP-based algorithm and BinOCT. Note that the differences between the different variations of DL8.5 are small here, which may not be surprising given the shallowness of the search tree considered.

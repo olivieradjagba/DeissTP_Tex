@@ -1,18 +1,6 @@
 \section{Our approach: DL8.5}
-As identified in the introduction, DL8 has a number of weaknesses, which we will address in this section.
-
-The most prominent of these weaknesses is that the size of the search tree considered by DL8 is unnecessarily large. Reconsider the example of Figure \ref{fig:2}, in which DL8’s pruning approach does not prune any node except from one infrequent itemset $(abc)$. We will see in this section that a new type of caching brand-and-bound search can reduce the number of itemsets considered significantly.
-
-The pseudo-code of our new algorithm, DL8.5, is presented in Algorithm \ref{algo:2}. DL8.5 inherits a number of ideas from DL8, including the use of a cache, the recursive traversal of the space of itemsets, and the use of depth and support constraints to prune the search space.
-
-The main distinguishing feature of DL8.5 concerns its use of bounds during the search.
-
-In DL8.5, the recursive procedure \verb|DL8.5-Recurse| has an additional parameter, \emph{init\_ub}, which represents an upper-bound on the quality of the decision trees that the recursive procedure is expected to find. If no sufficiently good tree can be found, the procedure returns a tree of type \verb|NO TREE|. Initially, the upper-bound that is used is $+\infty$ (line 3). However, as soon as the recursive algorithm has found one decision tree, or has found a better tree than earlier known, the quality of this decision tree, calculated in line 21, is used as upper-bound for future decision trees and is communicated to the children in the search tree (line 25, line 14, 18).
-
-The upper-bound is used to prune the search space using a test in line 17; intuitively, as soon as we have traversed one branch for an attribute, and the quality of that branch is already worse than accepted by the bound, we do not consider the second branch for that attribute.
-
 \newcommand{\trmtt}[1]{\textrm{\texttt{#1}}}
-\begin{algorithm}
+\begin{algorithm}[!ht]\small
 	\DontPrintSemicolon
 	\caption{$DL8.5(maxdepth, minsup)$}
 	\label{algo:2}
@@ -21,7 +9,6 @@ The upper-bound is used to prune the search space using a test in line 17; intui
 	$cache \gets HashSet < Itemset, BestTree >$\;
 	$bestSolution \gets$ \verb|DL8-Recurse|$(\emptyset, \infty)$\;
 	\Return bestSolution.tree\;
-	\textbf{Procedure} \texttt{DL8-Recurse}$(I, init\_ub)$\;
 	\Procb{
 		\If{$leaf\_error(I) = 0$ or $|I| = maxdepth$ or time-out
 			is reached}{
@@ -58,6 +45,19 @@ The upper-bound is used to prune the search space using a test in line 17; intui
 		\Return $solution$\;
 	}
 \end{algorithm}
+
+As identified in the introduction, DL8 has a number of weaknesses, which we will address in this section.
+
+The most prominent of these weaknesses is that the size of the search tree considered by DL8 is unnecessarily large. Reconsider the example of Figure \ref{fig:2}, in which DL8’s pruning approach does not prune any node except from one infrequent itemset $(abc)$. We will see in this section that a new type of caching brand-and-bound search can reduce the number of itemsets considered significantly.
+
+The pseudo-code of our new algorithm, DL8.5, is presented in Algorithm \ref{algo:2}. DL8.5 inherits a number of ideas from DL8, including the use of a cache, the recursive traversal of the space of itemsets, and the use of depth and support constraints to prune the search space.
+
+The main distinguishing feature of DL8.5 concerns its use of bounds during the search.
+
+In DL8.5, the recursive procedure \verb|DL8.5-Recurse| has an additional parameter, \emph{init\_ub}, which represents an upper-bound on the quality of the decision trees that the recursive procedure is expected to find. If no sufficiently good tree can be found, the procedure returns a tree of type \verb|NO TREE|. Initially, the upper-bound that is used is $+\infty$ (line 3). However, as soon as the recursive algorithm has found one decision tree, or has found a better tree than earlier known, the quality of this decision tree, calculated in line 21, is used as upper-bound for future decision trees and is communicated to the children in the search tree (line 25, line 14, 18).
+
+The upper-bound is used to prune the search space using a test in line 17; intuitively, as soon as we have traversed one branch for an attribute, and the quality of that branch is already worse than accepted by the bound, we do not consider the second branch for that attribute.
+
 In line 18 we use the quality of the first branch to bound the required quality of the second branch further.
 
 An important modification involves the interaction of the bounds with the cache. In DL8.5, we store an itemset also if no solution could be found for the given bound (line 29 is still executed even if the earlier loop did not find a tree).
@@ -71,7 +71,8 @@ A number of different heuristics could be considered. In our experiments, we con
 Our modifications of DL8 improve drastically the pruning of the search space. Figure \ref{fig:2} indicates which additional nodes are pruned during the execution of DL8.5 (for an alphabetic order of the attributes). At the end, 17 nodes are visited instead of 27.
 
 \begin{figure}
-	\includegraphics[width=\linewidth]{pruning}
+	\centering
+	\includegraphics[width=0.7\linewidth]{pruning}
 	\caption{ Example of pruning}
 	\label{fig:3}
 \end{figure}

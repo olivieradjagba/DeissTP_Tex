@@ -5,7 +5,8 @@ We limit our discussion to the key ideas behind DL8, and assume that the reader 
 DL8 operates on Boolean data. As running example of such data, we will use the dataset of Table 1a, which consists of three Boolean features and eleven examples. The optimal decision tree for this database can be found in Figure 1a. While it may seem a limitation that DL8 only operates on Boolean data, there are straightforward ways to transform any tabular database in a Boolean database: for categorical attributes, we can create a Boolean column for each possible value of that attribute; for numerical attributes, we can create Boolean columns for possible thresholds for that attribute.
 
 DL8 takes an itemset mining perspective on learning decision trees. In this perspective, the binary matrix of Table \ref{tab:1a} is transformed into the transactional database of Table \ref{tab:1b}. Each transaction of the dataset contains an itemset describing the presence or absence of each feature in the dataset. More formally, the database $\mathcal{D}$ can be thought of as a collection $\mathcal{D} = \{(t, I, c)\;|t\in \mathcal{T} , I \subseteq \mathcal{I}, c \in \mathcal{C}\}$, where $\mathcal{T}$ represents the transaction or rows identifiers, $\mathcal{I}$ is the set of possible items, and $\mathcal{T}$ is the set of class labels; within $\mathcal{I}$ there are two items (one positive, the other negative) for each original Boolean feature, and each itemset $I$ contains either a positive or a negative item for every feature.
-\begin{table}
+\begin{table}[!ht]
+	\centering
 	\subfloat[Binary matrix\label{tab:1a}]{
 		\begin{tabular}{c|c|c||c}
 			\hline
@@ -49,7 +50,8 @@ DL8 takes an itemset mining perspective on learning decision trees. In this pers
 \end{table}
 
 \begin{figure}
-	\includegraphics[width=0.9\linewidth]{graph}
+	\centering
+	\includegraphics[width=0.79\linewidth]{graph}
 	\caption{Optimal tree corresponding to database of Table \ref{tab:1}. Max depth = 3 and minimum examples per leaf = 1}
 	\label{fig:1}
 \end{figure}

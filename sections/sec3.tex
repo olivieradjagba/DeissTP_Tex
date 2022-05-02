@@ -1,12 +1,4 @@
-\section{DL8 Algorithm}
-%\newcommand{\Proc}[1]{\textbf{Procedure #1}}
-\begin{figure*}
-	\includegraphics[width=\textwidth]{images/lattice_search}
-	\caption{: Complete itemset lattice for introduction database and DL8.5 search execution}
-	\label{fig:2}
-\end{figure*}
-
-\begin{algorithm}
+\begin{algorithm}[!ht]\small
 	\DontPrintSemicolon
 	\caption{$DL8(maxdepth, minsup)$}
 	\label{algo:1}
@@ -38,6 +30,15 @@
 		\Return($\tau, b$)\;
 	}
 \end{algorithm}
+
+\section{DL8 Algorithm}
+%\newcommand{\Proc}[1]{\textbf{Procedure #1}}
+\begin{figure*}
+	\centering
+	\includegraphics[width=0.98\linewidth]{images/lattice_search}
+	\caption{: Complete itemset lattice for introduction database and DL8.5 search execution}
+	\label{fig:2}
+\end{figure*}
 
 A high-level perspective of the DL8 algorithm is given in Algorithm \ref{algo:1}. Essentially, the algorithm recursively enumerates itemsets using the \verb|DL8-Recurse(I)| function. The post-condition of this function is that it returns the optimal decision tree for the transactions covered by itemset $I$, together with the quality of that tree. This optimal tree is calculated recursively using the observation that the best decision tree for a set of transactions can be obtained by considering all possible ways of partitioning the set of transactions into two, and determining the best tree for each partition recursively.
 

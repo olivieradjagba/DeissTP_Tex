@@ -27,6 +27,13 @@
 \usepackage{algorithmic}
 \usepackage[ruled,vlined,linesnumbered]{algorithm2e}
 \makeatletter
+\algocf@newcmdside@kobe{Proca}{%
+	\KwSty{Procedure \normalfont\texttt{DL8-Recurse}$(I)$}%
+	\ifArgumentEmpty{#1}\relax{ #1}
+	\algocf@block{#2}{end}{#3}%
+	\par
+}
+
 \algocf@newcmdside@kobe{Procb}{%
 	\KwSty{Procedure \normalfont\texttt{DL8.5-Recurse}$(I, init\_ub)$}%
 	\ifArgumentEmpty{#1}\relax{ #1}
@@ -34,12 +41,6 @@
 	\par
 }
 
-\algocf@newcmdside@kobe{Proca}{%
-	\KwSty{Procedure \normalfont\texttt{DL8.5-Recurse}$(I)$}%
-	\ifArgumentEmpty{#1}\relax{ #1}
-	\algocf@block{#2}{end}{#3}%
-	\par
-}
 \makeatother
 
 
